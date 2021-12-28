@@ -1,0 +1,11 @@
+.container {
+  position: absolute;
+  height: 32px;
+  background-color: var(--color-2);
+  z-index: -1;
+  border-radius: .3rem;
+  transform: translateX(0px);
+
+  transition: .15s ease;
+  transition-property: width,transform,opacity;
+}
