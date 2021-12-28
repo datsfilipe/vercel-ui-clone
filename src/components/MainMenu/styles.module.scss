@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .leftMainMenuNavigation {
+    gap: 1rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+
+    .userIcon {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+
+      >span {
+        border-radius: 100%;
+        // feels bad that's the only way i found to make this work, one !important
+        border: 1px solid var(--color-2)!important;
+      }
+    }
+
+    button {
+      font-size: .95rem;
+      margin-top: .2rem;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: var(--color-5);
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--color-7);
+        cursor: pointer;
+      }
+    }
+
+    button:first-of-type {
+      height: 2.15rem;
+      padding: .3rem 1rem 0 1rem;
+      border-radius: .3rem;
+      margin: auto;
+      border: 1px solid var(--color-2);
+      transition-delay: .2s,0s;
+      transition: border .1s ease-out;
+      
+      &:hover {
+        cursor: text;
+        color: var(--color-5);
+        border-color: var(--color-7);
+      }
+    }
+  }
+}
