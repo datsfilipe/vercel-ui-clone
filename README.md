@@ -21,5 +21,5 @@ npm run dev
 # or
 yarn dev
 
-# in that order, or configure next.js/json-server to run on another port.
+# use commands in that order or configure next.js/json-server to run on another port.
 ```
