@@ -8,7 +8,6 @@ import { SectionHeader } from '../components/SectionHeader'
 import { MainMenu } from '../components/MainMenu'
 import { SubNavigationMenu } from '../components/SubNavigationMenu'
 
-import { api } from '../services/api'
 import { Project } from '../types'
 
 import styles from '../styles/Home.module.scss'
@@ -17,13 +16,9 @@ const Home: NextPage = () => {
   const [projects, setProjects] = useState<Project[]>([])
 
   useEffect(() => {
-    async function getProjects () {
-      const response = await api.get<Project[]>('projects')
-
-      setProjects(response.data)
-    }
-
-    getProjects()
+    fetch('/api/projects')
+      .then(res => res.json())
+      .then(json => setProjects(json))
   }, [])
 
   return (
@@ -47,13 +42,9 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <SectionHeader />
         <div className={styles.gridView}>
-          {
-            projects.length > 0 ?
-            projects.map(project => (
-              <Card project={project} key={project.id} />
-            ))
-            : ''
-          }
+          {Array.isArray(projects) ? projects?.map(project => (
+            <Card project={project} key={project.id} />
+          )): null}
         </div>
       </main>
 
