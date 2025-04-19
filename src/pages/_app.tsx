@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return isSmallerScreen ? (
     <main className='globalNotice'>
       <strong>
-        This project was made when I was learning stuff and I didn't know how to do it responsively at the time.
+        This project was made when I was learning stuff and I didn&apos;t know how to do it responsively at the time.
       </strong>
       <strong>
         And now I do not have the time to do it, so in order to appreciate this project, you need to use a desktop browser.
