@@ -28,27 +28,23 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap" rel="stylesheet" />  
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
-      {/* top bar view */}
       <header className={styles.topBar}>
         <MainMenu />
       </header>
-      {/* bottom menu nav */}
       <SubNavigationMenu />
 
-      {/* main content */}
       <main className={styles.main}>
         <SectionHeader />
         <div className={styles.gridView}>
           {Array.isArray(projects) ? projects?.map(project => (
             <Card project={project} key={project.id} />
-          )): null}
+          )) : null}
         </div>
       </main>
 
-      {/* footer container */}
       <Footer />
     </div>
   )
