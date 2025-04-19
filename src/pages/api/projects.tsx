@@ -49,8 +49,6 @@ const projects = [
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (_: NextApiRequest, res: NextApiResponse) => {
   try{
-    console.log(projects)
-
     res.status(200).json(projects)
   } catch (error) {
     res.status(400).json({ message: 'Something went wrong' })

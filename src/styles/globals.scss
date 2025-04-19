@@ -28,6 +28,25 @@ body {
   height: 100%;
   font-family: "Ubuntu", -apple-system, sans-serif;
   font-size: 93.75%;
+  background: var(--background);
+  color: var(--color-7);
+}
+
+main.globalNotice {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 122.5px);
+  margin: 1.8rem 2rem 0 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  strong {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-7);
+    margin-bottom: 1.5rem;
+  }
 }
 
 a {
